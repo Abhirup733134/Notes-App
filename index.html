@@ -9,6 +9,78 @@
 </head>
 
 <body>
+
+  <div id="main">
+    <form action="">
+      <h2>New Call</h2>
+
+      <label for="name">Full Name</label>
+      <div class="name">
+        <input type="text" placeholder="Enter Full Name" id="name">
+      </div>
+
+      <label for="image">Image URL</label>
+      <div class="image">
+        <input type="text" placeholder="Enter Image URL">
+      </div>
+
+      <label for="town">Home Town</label>
+      <div class="town">
+        <input type="text" placeholder="Enter Home Town">
+      </div>
+
+      <label for="purpose">Purpose</label>
+      <div class="purpose">
+        <input type="text" placeholder="e.g. Quick Appointment Needed">
+      </div>
+
+      <div class="category">
+        <h3>Category</h3>
+
+        <div class="selects">
+          <div class="emergency radios">
+            <input type="radio" name="category" id="emergency" value="emergency" title="emergency">
+            <label for="Emergency">Emergency</label>
+          </div>
+
+          <div class="important radios">
+            <input type="radio" name="category" id="Important" value="Important" title="Important">
+            <label for="Important">Important</label>
+          </div>
+
+          <div class="urgent radios">
+            <input type="radio" name="category" id="urgent" value="urgent" title="urgent">
+            <label for="urgent">Urgent</label>
+          </div>
+
+          <div class="No-rush radios">
+            <input type="radio" name="category" id="No-rush" value="No-rush" title="No-rush">
+            <label for="No-rush">No Rush</label>
+          </div>
+        </div>
+
+
+        <div class="btn">
+          <div class="create">
+            <span>Create New</span>
+          </div>
+
+          <div class="close">
+            <span>Close</span>
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+    </form>
+  </div>
+
+
+
+
   <script src="script.js"></script>
 </body>
 
