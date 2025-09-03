@@ -1,87 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="w-full h-full">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
+<body class="w-full h-full">
+  <div class="w-full h-full flex justify-center items-center">
+    <div class="w-[28vw] h-[80vh] bg-[#F5F5F5] rounded-[20px] p-8">
+      <h2 class="font-bold text-[1.3rem] mb-5">New Call</h2>
+      <form action="#" class="flex flex-col gap-[2vh]">
+        <div class="flex flex-col gap-[1vh]">
+          <label for="" class=" font-medium">Image URL</label>
+          <div class="w-full flex justify-center">
+            <input type="text" placeholder="Image URL"
+              class="border-1 border-[#919191] rounded-[10px] w-full h-[35px] text-[.8rem] pl-[10px]">
+          </div>
+        </div>
 
-  <div id="main">
-    <form action="">
-      <h2>New Call</h2>
+        <div class="flex flex-col gap-[1vh]">
+          <label for="" class=" font-medium">Full Name</label>
+          <div class="w-full flex justify-center">
+            <input type="text" placeholder="Enter Full Name"
+              class="border-1 border-[#919191] rounded-[10px] w-full h-[35px] text-[.8rem] pl-[10px]">
+          </div>
+        </div>
 
-      <label for="name">Full Name</label>
-      <div class="name">
-        <input type="text" placeholder="Enter Full Name" id="name">
-      </div>
+        <div class="flex flex-col gap-[1vh]">
+          <label for="" class=" font-medium">Home Town</label>
+          <div class="w-full flex justify-center">
+            <input type="text" placeholder="What's the Home Town"
+              class="border-1 border-[#919191] rounded-[10px] w-full h-[35px] text-[.8rem] pl-[10px]">
+          </div>
+        </div>
 
-      <label for="image">Image URL</label>
-      <div class="image">
-        <input type="text" placeholder="Enter Image URL">
-      </div>
+        <div class="flex flex-col gap-[1vh]">
+          <label for="" class=" font-medium">Purpose</label>
+          <div class="w-full flex justify-center">
+            <input type="text" placeholder="Eg. Appointment needed"
+              class="border-1 border-[#919191] rounded-[10px] w-full h-[35px] text-[.8rem] pl-[10px]">
+          </div>
+        </div>
 
-      <label for="town">Home Town</label>
-      <div class="town">
-        <input type="text" placeholder="Enter Home Town">
-      </div>
+        <h2 class=" font-medium [1rem]">Category</h2>
 
-      <label for="purpose">Purpose</label>
-      <div class="purpose">
-        <input type="text" placeholder="e.g. Quick Appointment Needed">
-      </div>
-
-      <div class="category">
-        <h3>Category</h3>
-
-        <div class="selects">
-          <div class="emergency radios">
-            <input type="radio" name="category" id="emergency" value="emergency" title="emergency">
-            <label for="Emergency">Emergency</label>
+        <div class="flex flex-col gap-[1vh]">
+          <div
+            class=" w-[10vw] h-[30px] rounded-[30px] flex justify-start pl-[10px] items-center gap-[3px] border-2 border-[#CF0000]">
+            <input type="checkbox" id="Emergency" name="Category">
+            <label for="Emergency" class="text-[#CF0000]">Emergency</label>
           </div>
 
-          <div class="important radios">
-            <input type="radio" name="category" id="Important" value="Important" title="Important">
-            <label for="Important">Important</label>
+          <div
+            class=" w-[10vw] h-[30px] rounded-[30px] flex justify-start pl-[10px] items-center gap-[3px] border-2 border-[#FF7300]">
+            <input type="checkbox" id="Important" name="Category">
+            <label for="Important" class="text-[#FF7300]">Important</label>
           </div>
 
-          <div class="urgent radios">
-            <input type="radio" name="category" id="urgent" value="urgent" title="urgent">
-            <label for="urgent">Urgent</label>
+          <div
+            class="w-[10vw] h-[30px] rounded-[30px] flex justify-start pl-[10px] items-center gap-[3px] border-2 border-[#520099]">
+            <input type="checkbox" id="Urgent" name="Category">
+            <label for="Urgent" class="text-[#520099]">Urgent</label>
           </div>
 
-          <div class="No-rush radios">
-            <input type="radio" name="category" id="No-rush" value="No-rush" title="No-rush">
-            <label for="No-rush">No Rush</label>
+          <div
+            class="w-[10vw] h-[30px] rounded-[30px] flex justify-start pl-[10px] items-center gap-[3px] border-2 border-[#1F1F1F]">
+            <input type="checkbox" id="NoRush" name="Category">
+            <label for="NoRush" class="text-[#292929]">No Rush</label>
           </div>
         </div>
 
 
-        <div class="btn">
-          <div class="create">
-            <span>Create New</span>
-          </div>
-
-          <div class="close">
-            <span>Close</span>
-          </div>
-        </div>
-
-
-      </div>
-
-
-
-    </form>
+      </form>
+    </div>
   </div>
-
-
-
-
-  <script src="script.js"></script>
 </body>
 
 </html>
