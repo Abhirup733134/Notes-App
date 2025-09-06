@@ -4,15 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Reminder-App</title>
   <!-- <link rel="stylesheet" href="style.css"> -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body class="w-full h-full bg-[#F5F5F5]">
-  <div class="w-full h-full flex justify-center items-center gap-[2vw]"> <!-- main -->
 
-    <div class="w-[28vw] h-[80vh] bg-[#ffffff] rounded-[20px] p-8 hidden">
+
+
+  <div class="w-full h-full flex justify-center items-center gap-[2vw]" id="main"> <!-- main -->
+
+    <div class="w-[28vw] h-[80vh] bg-[#ffffff] rounded-[20px] p-8 shadow-xl hidden" id="form">
       <h2 class="font-bold text-[1.3rem] mb-5">New Call</h2>
       <form action="#" class="flex flex-col gap-[2vh]">
         <div class="flex flex-col gap-[1vh]">
@@ -79,59 +82,66 @@
       </form>
     </div>
 
-    <div class="flex flex-col gap-[2vh]">
-      <div class="w-[40px] bg-[#ffffff] rounded-full p-3">
-        <img src="https://img.icons8.com/?size=100&id=3220&format=png&color=000000" alt="">
-      </div>
-
-      <div class="w-[40px] bg-[#ffffff] rounded-full p-3">
-        <img src="https://img.icons8.com/?size=100&id=87702&format=png&color=000000" alt="">
-      </div>
-
-      <div class="w-[40px] bg-[#ffffff] rounded-full p-3">
-        <img src="https://img.icons8.com/?size=100&id=86293&format=png&color=000000" alt="">
-      </div>
-    </div>
-
-    <div class="w-[28vw] h-[40vh] bg-[#ffffff] rounded-[20px] p-6 flex flex-col gap-[2vh]">
-      <div class="w-[5rem] h-[5rem] rounded-[100%] overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1756143058418-708fde245d60?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDQ5fHRvd0paRnNrcEdnfHxlbnwwfHx8fHw%3D"
-          alt="" class="w-full h-full object-cover">
-      </div>
-
-      <h2 class="font-bold text-[1.5rem]">
-        Abhirup Sarkar
-      </h2>
-
-      <div>
-        <div class="flex justify-between">
-          <span>Home Town</span>
-          <Span>Raiagnj</Span>
+    <div class="flex justify-center items-center gap-[2vw]" id="card">
+      <div class="flex flex-col gap-[2vh]">
+        <div class="w-[40px] bg-[#ffffff] rounded-full p-3 shadow-md" id="plus">
+          <img src="https://img.icons8.com/?size=100&id=3220&format=png&color=000000" alt="">
         </div>
 
-        <div class="flex justify-between">
-          <span>Bookings</span>
-          <Span>3 Times</Span>
+        <div class="w-[40px] bg-[#ffffff] rounded-full p-3 shadow-md">
+          <img src="https://img.icons8.com/?size=100&id=87702&format=png&color=000000" alt="">
+        </div>
+
+        <div class="w-[40px] bg-[#ffffff] rounded-full p-3 shadow-md">
+          <img src="https://img.icons8.com/?size=100&id=86293&format=png&color=000000" alt="">
         </div>
       </div>
 
-      <div class="flex gap-[0.5vw] mt-[1vh]">
-        <div class="bg-[#010101] w-[5vw] h-[4vh] rounded-full flex justify-center items-center text-white">
-          <span>Call</span>
+      <div class="w-[28vw] h-[40vh] bg-[#ffffff] rounded-[20px] p-6 flex flex-col gap-[2vh] shadow-xl">
+        <div class="w-[5rem] h-[5rem] rounded-[100%] overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1756143058418-708fde245d60?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDQ5fHRvd0paRnNrcEdnfHxlbnwwfHx8fHw%3D"
+            alt="" class="w-full h-full object-cover">
         </div>
-        <div class="bg-[#ececec] w-[6vw] h-[4vh] rounded-full flex justify-center items-center "><span>Message</span>
+
+        <h2 class="font-bold text-[1.5rem]">
+          Abhirup Sarkar
+        </h2>
+
+        <div>
+          <div class="flex justify-between">
+            <span>Home Town</span>
+            <Span>Raiagnj</Span>
+          </div>
+
+          <div class="flex justify-between">
+            <span>Bookings</span>
+            <Span>3 Times</Span>
+          </div>
+        </div>
+
+        <div class="flex gap-[0.5vw] mt-[1vh]">
+          <div class="bg-[#010101] w-[5vw] h-[4vh] rounded-full flex justify-center items-center text-white">
+            <span>Call</span>
+          </div>
+          <div class="bg-[#ececec] w-[6vw] h-[4vh] rounded-full flex justify-center items-center "><span>Message</span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="flex flex-col gap-[1vh]"> <!-- colors -->
-      <div class="bg-red-500 w-[20px] h-[20px] rounded-full"></div>
-      <div class="bg-blue-500 w-[20px] h-[20px] rounded-full"></div>
-      <div class="bg-yellow-500 w-[20px] h-[20px] rounded-full"></div>
-      <div class="bg-green-500 w-[20px] h-[20px] rounded-full"></div>
+      <div class="flex flex-col gap-[1vh]"> <!-- colors -->
+        <div class="bg-red-500 w-[20px] h-[20px] rounded-full shadow-md"></div>
+        <div class="bg-blue-500 w-[20px] h-[20px] rounded-full shadow-md"></div>
+        <div class="bg-yellow-500 w-[20px] h-[20px] rounded-full shadow-md"></div>
+        <div class="bg-green-500 w-[20px] h-[20px] rounded-full shadow-md"></div>
+      </div>
     </div>
   </div>
+
+
+
+
+  <script src="script.js"></script>
 </body>
 
 </html>
