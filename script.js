@@ -86,13 +86,17 @@ form.addEventListener("submit", function (evt) { //triming the spaces
 
 
   saveToLocalStorage({
-    imageURL,
-    fullName,
-    purpose,
-    homeTown,
-    selected, 
-
+    imageURL: imageURL.value,
+    fullName: fullName.value,
+    purpose: purpose.value,
+    homeTown: homeTown.value,
+    selected,
   })
+
+  
+  form.classList.add("hidden");
+  card.classList.remove("hidden");
+  document.querySelector("form").reset();
 })
 
 
