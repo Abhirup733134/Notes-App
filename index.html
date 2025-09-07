@@ -15,13 +15,13 @@
 
   <div class="w-full h-full flex justify-center items-center gap-[2vw]" id="main"> <!-- main -->
 
-    <div class="w-[28vw] h-[80vh] bg-[#ffffff] rounded-[20px] p-8 shadow-xl hidden" id="form">
+    <div class="w-[28vw] h-[80vh] bg-[#ffffff] rounded-[20px] p-8 shadow-xl flex flex-col gap-3 hidden" id="form">
       <h2 class="font-bold text-[1.3rem] mb-5">New Call</h2>
       <form action="#" class="flex flex-col gap-[2vh]">
         <div class="flex flex-col gap-[1vh]">
           <label for="" class=" font-medium">Image URL</label>
           <div class="w-full flex justify-center">
-            <input type="text" placeholder="Image URL"
+            <input required type="text" placeholder="Image URL"
               class="border-1 border-[#919191] rounded-[10px] w-full h-[35px] text-[.8rem] pl-[10px]">
           </div>
         </div>
@@ -29,7 +29,7 @@
         <div class="flex flex-col gap-[1vh]">
           <label for="" class=" font-medium">Full Name</label>
           <div class="w-full flex justify-center">
-            <input type="text" placeholder="Enter Full Name"
+            <input required type="text" placeholder="Enter Full Name"
               class="border-1 border-[#919191] rounded-[10px] w-full h-[35px] text-[.8rem] pl-[10px]">
           </div>
         </div>
@@ -37,7 +37,7 @@
         <div class="flex flex-col gap-[1vh]">
           <label for="" class=" font-medium">Home Town</label>
           <div class="w-full flex justify-center">
-            <input type="text" placeholder="What's the Home Town"
+            <input required type="text" placeholder="What's the Home Town"
               class="border-1 border-[#919191] rounded-[10px] w-full h-[35px] text-[.8rem] pl-[10px]">
           </div>
         </div>
@@ -45,46 +45,55 @@
         <div class="flex flex-col gap-[1vh]">
           <label for="" class=" font-medium">Purpose</label>
           <div class="w-full flex justify-center">
-            <input type="text" placeholder="Eg. Appointment needed"
+            <input required type="text" placeholder="Eg. Appointment needed"
               class="border-1 border-[#919191] rounded-[10px] w-full h-[35px] text-[.8rem] pl-[10px]">
           </div>
         </div>
 
         <h2 class=" font-medium [1rem]">Category</h2>
 
-        <div class="flex flex-col gap-[1vh]">
+        <div class="flex flex gap-1">
           <div
-            class=" w-[10vw] h-[30px] rounded-[30px] flex justify-start pl-[10px] items-center gap-[3px] border-2 border-[#CF0000]">
-            <input type="checkbox" id="Emergency" name="Category">
-            <label for="Emergency" class="text-[#CF0000]">Emergency</label>
+            class=" w-[10vw] h-[30px] rounded-[30px] flex justify-center items-center gap-[3px] border-2 border-[#CF0000] p-2">
+            <input required type="radio" id="Emergency" name="Category">
+            <label for="Emergency" class="text-[#CF0000] text-[0.8rem]">Emergency</label>
           </div>
 
           <div
-            class=" w-[10vw] h-[30px] rounded-[30px] flex justify-start pl-[10px] items-center gap-[3px] border-2 border-[#FF7300]">
-            <input type="checkbox" id="Important" name="Category">
-            <label for="Important" class="text-[#FF7300]">Important</label>
+            class=" w-[10vw] h-[30px] rounded-[30px] flex justify-center  items-center gap-[3px] border-2 border-[#FF7300] p-2">
+            <input required type="radio" id="Important" name="Category">
+            <label for="Important" class="text-[#FF7300] text-[0.8rem]">Important</label>
           </div>
 
           <div
-            class="w-[10vw] h-[30px] rounded-[30px] flex justify-start pl-[10px] items-center gap-[3px] border-2 border-[#520099]">
-            <input type="checkbox" id="Urgent" name="Category">
-            <label for="Urgent" class="text-[#520099]">Urgent</label>
+            class="w-[10vw] h-[30px] rounded-[30px] flex justify-center  items-center gap-[3px] border-2 border-[#520099] p-2">
+            <input required type="radio" id="Urgent" name="Category">
+            <label for="Urgent" class="text-[#520099] text-[0.8rem]">Urgent</label>
           </div>
 
           <div
-            class="w-[10vw] h-[30px] rounded-[30px] flex justify-start pl-[10px] items-center gap-[3px] border-2 border-[#1F1F1F]">
-            <input type="checkbox" id="NoRush" name="Category">
-            <label for="NoRush" class="text-[#292929]">No Rush</label>
+            class="w-[10vw] h-[30px] rounded-[30px] flex justify-center  items-center gap-[3px] border-2 border-[#1F1F1F]">
+            <input required type="radio" id="NoRush" name="Category">
+            <label for="NoRush" class="text-[#292929] text-[0.8rem]">No Rush</label>
           </div>
         </div>
 
-
+        <div class="flex flex-col gap-[1vh]">
+          
+            <input type="submit" class="w-full h-[5vh] bg-[#141414] text-white rounded-full flex justify-center items-center">
+          
+        
+          <div class="w-full h-[5vh] bg-[#c63a3a] text-white rounded-full flex justify-center items-center" id="close-form">
+            <span>Close</span>
+          </div>
+        </div>
       </form>
+
     </div>
 
     <div class="flex justify-center items-center gap-[2vw]" id="card">
       <div class="flex flex-col gap-[2vh]">
-        <div class="w-[40px] bg-[#ffffff] rounded-full p-3 shadow-md" id="plus">
+        <div class="w-[40px] bg-[#ffffff] rounded-full p-3 shadow-md" id="add-note">
           <img src="https://img.icons8.com/?size=100&id=3220&format=png&color=000000" alt="">
         </div>
 
@@ -136,6 +145,8 @@
         <div class="bg-green-500 w-[20px] h-[20px] rounded-full shadow-md"></div>
       </div>
     </div>
+
+
   </div>
 
 
